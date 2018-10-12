@@ -1,0 +1,28 @@
+{
+  "name": "starter-express",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "run-p build:*",
+    "build:client": "parcel build src/client/index.html --target browser -d dist/client",
+    "build:server": "parcel build src/server/server.js --target node -d dist/server",
+    "server": "nodemon --watch dist/server dist/server/server.js",
+    "prestart": "mkdir -p dist/server && touch dist/server/server.js",
+    "start": "run-p start:* server",
+    "start:client": "parcel watch src/client/index.html --target browser -d dist/client --hmr-port 1235",
+    "start:server": "parcel watch src/server/server.js --target node -d dist/server"
+  },
+  "dependencies": {
+    "compression": "1.7.3",
+    "express": "4.16.4",
+    "http-proxy-middleware": "0.19.0",
+    "lodash": "4.17.11"
+  },
+  "devDependencies": {
+    "del-cli": "1.1.0",
+    "npm-run-all": "4.1.3",
+    "parcel-bundler": "1.10.3",
+    "parcel-plugin-bundle-manifest": "0.2.0"
+  }
+}
