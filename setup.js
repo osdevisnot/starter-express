@@ -22,7 +22,7 @@ fs.writeFileSync(fromRoot('README.md'), `#${name}\n\n`, 'utf-8')
 /**
  * Rewrite files replacing starter name
  */
-const rewriteFiles = ['client/index.html', 'client/public/manifest.json', 'package.json']
+const rewriteFiles = ['src/client/index.html', 'src/client/public/manifest.json', 'package.json']
 rewriteFiles.forEach(file => {
   const content = fs.readFileSync(fromRoot(file), 'utf-8')
   fs.writeFileSync(fromRoot(file), content.replace(/starter-express/g, name), 'utf-8')
