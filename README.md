@@ -1,5 +1,7 @@
 # starter-express
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/osdevisnot/starter-express.svg)](https://greenkeeper.io/)
+
 This project is a starter for express based applications. To use this starter, ensure you have `degit` installed.
 
 ```
