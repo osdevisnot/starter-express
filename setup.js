@@ -31,13 +31,16 @@ rewriteFiles.forEach(file => {
 /**
  * Remove Files and Self destruct...
  */
-const files = ['yarn.lock', '.travis.yml', 'setup.js']
+const files = ['.travis.yml', 'setup.js']
 files.forEach(file => fs.unlinkSync(fromRoot(file)))
 
 /**
  * Add latest devDependencies and initialize git repo
  */
-const commands = ['yarn', 'git add .', 'git commit -am "first commit from starter-express"']
+const commands = ['git add .', 'git commit -am "first commit from starter-express"', 'npm install']
+if (!fs.existsSync('.git')) {
+  commands.unshift('git init')
+}
 commands.forEach(command => {
   console.log(`----- Executing Command -----> ${command}`)
   sync(command, { stdio: [0, 1, 2] })
