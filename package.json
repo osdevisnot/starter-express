@@ -14,7 +14,7 @@
     "start:server": "parcel watch src/server/server.js --target node -d dist/server"
   },
   "dependencies": {
-    "compression": "1.7.3",
+    "compression": "1.7.4",
     "express": "4.16.4",
     "http-proxy-middleware": "0.19.1",
     "lodash": "4.17.11"
