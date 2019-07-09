@@ -17,7 +17,7 @@
     "compression": "1.7.3",
     "express": "4.16.4",
     "http-proxy-middleware": "0.19.1",
-    "lodash": "4.17.11"
+    "lodash": "4.17.12"
   },
   "devDependencies": {
     "del-cli": "1.1.0",
